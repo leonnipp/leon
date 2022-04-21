@@ -1,0 +1,14 @@
+syntax = "proto3";
+package leonnipp.leon.leon;
+
+import "gogoproto/gogo.proto";
+import "leon/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/leonnipp/leon/x/leon/types";
+
+// GenesisState defines the leon module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
